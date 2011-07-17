@@ -1,0 +1,6 @@
+*.pyc
+*.pot
+*.*~
+/compass/gwark/.sass-cache
+/.settings/org.eclipse.core.resources.prefs
+

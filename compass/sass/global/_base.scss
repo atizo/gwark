@@ -1,0 +1,42 @@
+body{
+	background: #333333 url(/site_media/img/gbg.png) top center no-repeat;
+	color: #F6F6F6;
+}
+
+div#container{
+	width: 960px;
+	margin: 0px auto;
+}
+
+div#tbar{
+	background-color: #424242;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	
+}
+
+header{
+	position: relative;
+	
+	img.logo{
+		position: absolute;
+	}
+	
+	h1{
+		position: absolute;
+		@include single-text-shadow;
+		font-size: 32px;
+		font-family: 'Varela Round', sans-serif;
+		font-weight: normal;
+		top: 45px;
+		left: 250px;
+	}
+	
+	a#btn-go{
+		position: absolute;
+		top: 49px;
+		left: 760px; 
+	}	
+}

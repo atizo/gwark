@@ -1,0 +1,164 @@
+/* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+button { margin-top: 60px; }
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+button.cupid-green { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a227), color-stop(100%, #00710f)); background-image: -webkit-linear-gradient(top, #00a227, #00710f); background-image: -moz-linear-gradient(top, #00a227, #00710f); background-image: -o-linear-gradient(top, #00a227, #00710f); background-image: -ms-linear-gradient(top, #00a227, #00710f); background-image: linear-gradient(top, #00a227, #00710f); border: 1px solid #4d8a1c; border-bottom: 1px solid #007c1c; -moz-border-radius: 12px; -webkit-border-radius: 12px; -o-border-radius: 12px; -ms-border-radius: 12px; -khtml-border-radius: 12px; border-radius: 12px; -moz-box-shadow: inset 0 1px 0 0 #6fb779; -webkit-box-shadow: inset 0 1px 0 0 #6fb779; -o-box-shadow: inset 0 1px 0 0 #6fb779; box-shadow: inset 0 1px 0 0 #6fb779; color: #fff; font: bold 19px 'Varela Round', sans-serif; line-height: 20px; padding: 5px 0 3px 0; text-align: center; text-shadow: 0 -1px 0 #4c9021; width: 120px; -moz-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -webkit-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -o-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; }
+button.cupid-green:hover { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00bd2d), color-stop(100%, #008a12)); background-image: -webkit-linear-gradient(top, #00bd2d, #008a12); background-image: -moz-linear-gradient(top, #00bd2d, #008a12); background-image: -o-linear-gradient(top, #00bd2d, #008a12); background-image: -ms-linear-gradient(top, #00bd2d, #008a12); background-image: linear-gradient(top, #00bd2d, #008a12); -moz-box-shadow: inset 0 1px 0 0 #8dbf67; -webkit-box-shadow: inset 0 1px 0 0 #8dbf67; -o-box-shadow: inset 0 1px 0 0 #8dbf67; box-shadow: inset 0 1px 0 0 #8dbf67; -moz-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -webkit-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -o-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; cursor: pointer; }
+button.cupid-green:active { border: 1px solid #5b992b; border-bottom: 1px solid #538c27; }
+
+a.cupid-green { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a227), color-stop(100%, #00710f)); background-image: -webkit-linear-gradient(top, #00a227, #00710f); background-image: -moz-linear-gradient(top, #00a227, #00710f); background-image: -o-linear-gradient(top, #00a227, #00710f); background-image: -ms-linear-gradient(top, #00a227, #00710f); background-image: linear-gradient(top, #00a227, #00710f); border: 1px solid #4d8a1c; border-bottom: 1px solid #007c1c; -moz-border-radius: 12px; -webkit-border-radius: 12px; -o-border-radius: 12px; -ms-border-radius: 12px; -khtml-border-radius: 12px; border-radius: 12px; -moz-box-shadow: inset 0 1px 0 0 #6fb779; -webkit-box-shadow: inset 0 1px 0 0 #6fb779; -o-box-shadow: inset 0 1px 0 0 #6fb779; box-shadow: inset 0 1px 0 0 #6fb779; color: #fff; font: bold 19px 'Varela Round', sans-serif; line-height: 20px; padding: 5px 0 3px 0; text-align: center; text-shadow: 0 -1px 0 #4c9021; width: 120px; -moz-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -webkit-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -o-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; text-decoration: none; }
+a.cupid-green { *display: inline; }
+a.cupid-green:hover { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00bd2d), color-stop(100%, #008a12)); background-image: -webkit-linear-gradient(top, #00bd2d, #008a12); background-image: -moz-linear-gradient(top, #00bd2d, #008a12); background-image: -o-linear-gradient(top, #00bd2d, #008a12); background-image: -ms-linear-gradient(top, #00bd2d, #008a12); background-image: linear-gradient(top, #00bd2d, #008a12); -moz-box-shadow: inset 0 1px 0 0 #8dbf67; -webkit-box-shadow: inset 0 1px 0 0 #8dbf67; -o-box-shadow: inset 0 1px 0 0 #8dbf67; box-shadow: inset 0 1px 0 0 #8dbf67; -moz-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -webkit-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -o-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; cursor: pointer; }
+a.cupid-green:active { border: 1px solid #5b992b; border-bottom: 1px solid #538c27; }
+a.cupid-green:active, a.cupid-green:hover, a.cupid-green:visited { color: #fff; }
+
+a.glow { -moz-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -webkit-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; -o-box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; box-shadow: rgba(0, 148, 33, 0.5) 0 0 12px, rgba(82, 191, 61, 0.3) 0 0 5px 1px inset; }
+
+/* HTML5 ✰ Boilerplate */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+body { font: 13px/1.231 sans-serif; *font-size: small; }
+
+select, input, textarea, button { font: 99% sans-serif; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+html { overflow-y: scroll; }
+
+a:hover, a:active { outline: none; }
+
+ul, ol { margin-left: 2em; }
+
+ol { list-style-type: decimal; }
+
+nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
+
+small { font-size: 85%; }
+
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+
+textarea { overflow: auto; }
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+
+input[type="radio"] { vertical-align: text-bottom; }
+
+input[type="checkbox"] { vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+
+.ie6 input { vertical-align: text-bottom; }
+
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+button, input, select, textarea { margin: 0; }
+
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+::-moz-selection { background: #00861a; color: #fff; text-shadow: none; }
+
+::selection { background: #00861a; color: #fff; text-shadow: none; }
+
+a:link { -webkit-tap-highlight-color: #00861a; }
+
+button { width: auto; overflow: visible; }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea { color: #444; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+a, a:active, a:visited { color: #607890; }
+
+a:hover { color: #036; }
+
+body { background: #333333 url(/site_media/img/gbg.png) top center no-repeat; color: #F6F6F6; }
+
+div#container { width: 960px; margin: 0px auto; }
+
+div#tbar { background-color: #424242; height: 30px; position: absolute; top: 0; width: 100%; }
+
+header { position: relative; }
+header img.logo { position: absolute; }
+header h1 { position: absolute; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 3px; font-size: 32px; font-family: 'Varela Round', sans-serif; font-weight: normal; top: 45px; left: 250px; }
+header a#btn-go { position: absolute; top: 49px; left: 760px; }
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+.hidden { display: none; visibility: hidden; }
+
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+@media screen and (max-device-width: 480px) { /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */ }
+@media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }

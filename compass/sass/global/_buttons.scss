@@ -1,0 +1,52 @@
+button {
+  margin-top: 60px;
+}
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+@mixin cupid-green {
+  @include background-image(linear-gradient(top, #00a227, #00710f));
+  border: 1px solid #4d8a1c;
+  border-bottom: 1px solid #007c1c;
+  @include border-radius(12px);
+  @include box-shadow(inset 0 1px 0 0 #6fb779);
+  color: #fff;
+  font: bold 19px 'Varela Round', sans-serif;;
+  line-height: 20px;
+  padding: 5px 0 3px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+  width: 120px;
+  @include box-shadow(rgba(#009421, 0.5) 0 0 12px, rgba(#52bf3d, 0.3) 0 0 5px 1px inset);
+
+  &:hover {
+    @include background-image(linear-gradient(top, #00bd2d, #008a12));
+    @include box-shadow(inset 0 1px 0 0 #8dbf67);
+    @include box-shadow(rgba(#009421, 0.5) 0 0 12px, rgba(#52bf3d, 0.3) 0 0 5px 1px inset);
+    cursor: pointer;
+  }
+
+  &:active {
+    border: 1px solid #5b992b;
+    border-bottom: 1px solid #538c27;
+    
+  }
+}
+
+button.cupid-green {
+  @include cupid-green;
+}
+
+a.cupid-green {
+	@include inline-block;
+	@include cupid-green;
+	text-decoration: none;
+	
+	&:active, &:hover, &:visited{
+		color: #fff;
+	}
+}
+
+a.glow{
+	@include box-shadow(rgba(#009421, 0.5) 0 0 12px, rgba(#52bf3d, 0.3) 0 0 5px 1px inset);
+}
