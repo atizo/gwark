@@ -1,9 +1,3 @@
-button {
-  margin-top: 60px;
-}
-
-/* cupid green (inspired by okcupid.com)
-*******************************************************************************/
 @mixin cupid-green {
   @include background-image(linear-gradient(top, #00a227, #00710f));
   border: 1px solid #4d8a1c;
@@ -31,10 +25,6 @@ button {
     border-bottom: 1px solid #538c27;
     
   }
-}
-
-button.cupid-green {
-  @include cupid-green;
 }
 
 a.cupid-green {

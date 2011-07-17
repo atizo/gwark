@@ -27,10 +27,19 @@
 </head>
 
 <body>
-	<div id="tbar"></div>
+	<div id="tbar">
+		<div class="frame">
+			<ul>
+				<li><a href="#">{% trans "Login" %}</a></li>
+				<li><a href="#">{% trans "Signup" %}</a></li>
+				<li><a href="#">{% trans "About" %}</a></li>
+				<li><a href="#">{% trans "Help" %}</a></li>
+			</ul>
+		</div>
+	</div>
 	<div id="container">
 		<header>
-			<img src="/site_media/img/gwark-logo.png" width="237" height="116">
+			<img class="logo" src="/site_media/img/gwark-logo.png" width="237" height="116" alt="Gwark logo">
 			<h1>{% trans "Create your personal tag cloud!" %}</h1>
 			<a id="btn-go" class="cupid-green glow" href="#">Go</a>
 		</header>
@@ -40,15 +49,14 @@
 		</footer>
 	</div> <!-- eo #container -->
 	<script>
-	// Load jQuery and initialize
 	yepnope([
 		"http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js",
 		{
 			load: "/site_media/js/libs/jquery.pulse.js",
 	  		callback: function() {
-				/*$('#btn-go').pulse({
-				    opacity: [1,0] // pulse between 1 and 0
-				}, 200, 5);*/
+				$('#btn-go').pulse({
+				    opacity: [1, 0.7]
+				}, 1200, 200);
 			}
 		}
 	]);

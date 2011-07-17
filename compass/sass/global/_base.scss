@@ -5,7 +5,7 @@ body{
 
 div#container{
 	width: 960px;
-	margin: 0px auto;
+	margin: 30px auto 0px;
 }
 
 div#tbar{
@@ -15,6 +15,26 @@ div#tbar{
 	top: 0;
 	width: 100%;
 	
+	div.frame{
+		width: 960px;
+		margin: 0px auto;
+		position: relative;
+		
+		ul{
+			@include inline-list;
+			left: 250px;
+			top: 6px;
+			position: absolute;
+			
+			li{
+				padding-right: 20px;
+				
+				a{					
+					@include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 1px);
+				}
+			}
+		}
+	}	
 }
 
 header{
@@ -22,6 +42,7 @@ header{
 	
 	img.logo{
 		position: absolute;
+		top: -30px;
 	}
 	
 	h1{
@@ -30,13 +51,13 @@ header{
 		font-size: 32px;
 		font-family: 'Varela Round', sans-serif;
 		font-weight: normal;
-		top: 45px;
+		top: 15px;
 		left: 250px;
 	}
 	
 	a#btn-go{
 		position: absolute;
-		top: 49px;
+		top: 19px;
 		left: 760px; 
 	}	
 }
