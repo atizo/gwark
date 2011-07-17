@@ -28,13 +28,11 @@ except ImportError:
 TEMPLATE_DEBUG = DEBUG
 MANAGERS = ADMINS
 TIME_ZONE = 'Europe/Zurich'
-LANGUAGE_CODE = 'de'
+LANGUAGE_CODE = 'en'
 ugettext = lambda s: s
 
 LANGUAGES = (
-    ('de', u'Deutsch'),
     ('en', u'English'),
-    ('fr', u'Français'),
 )
 
 LANGUAGES_DICT = {}
@@ -42,9 +40,7 @@ for k,v in LANGUAGES:
     LANGUAGES_DICT[k] = v
 
 SUPPORTED_LANGUAGES = set([
-    'de',
     'en',
-    'fr',
 ])
 
 DATE_FORMAT = ugettext(u"%d.%m.%Y")
