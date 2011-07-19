@@ -1,0 +1,40 @@
+.slideshow {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 450px;
+}
+
+#slideshow_track {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+#slideshow_list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3000px;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	li {
+		float: left;
+		width: 1000px;
+		height: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#slideshow_list img {
+		height: 100%;
+		-webkit-transition: margin .3s;
+		-moz-transition: margin .3s;
+		transition: margin .3s;
+	}
+}

@@ -126,7 +126,7 @@ div#tbar div.frame ul, div#tbar div.frame ul li { margin: 0px; padding: 0px; dis
 div#tbar div.frame ul li { padding-right: 20px; }
 div#tbar div.frame ul li a { text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 1px; }
 
-header { position: relative; }
+header { position: relative; height: 75px; }
 header img.logo { position: absolute; top: -30px; }
 header h1 { position: absolute; text-shadow: rgba(0, 0, 0, 0.6) 0px 2px 3px; font-size: 32px; font-family: 'Varela Round', sans-serif; font-weight: normal; top: 15px; left: 250px; }
 header a#btn-go { position: absolute; top: 19px; left: 760px; }
@@ -159,3 +159,10 @@ header a#btn-go { position: absolute; top: 19px; left: 760px; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; } }
+.slideshow { position: relative; width: 100%; overflow: hidden; height: 450px; }
+
+#slideshow_track { position: absolute; top: 0; left: 0; height: 100%; }
+
+#slideshow_list { position: absolute; top: 0; left: 0; width: 3000px; height: 100%; list-style: none; margin: 0; padding: 0; }
+#slideshow_list li { float: left; width: 1000px; height: 100%; text-align: center; margin: 0; padding: 0; }
+#slideshow_list #slideshow_list img { height: 100%; -webkit-transition: margin .3s; -moz-transition: margin .3s; transition: margin .3s; }

@@ -21,6 +21,6 @@
 #
 from django.template.response import TemplateResponse
 
-def start(request):
-    return TemplateResponse(request, 'base.html', {})
+def welcome(request):
+    return TemplateResponse(request, 'welcome.html', {})
 

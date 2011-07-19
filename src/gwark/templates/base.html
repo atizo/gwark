@@ -22,8 +22,7 @@
 	<!--[if IE]>
 	<link href="/site_media/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<![endif]-->
-	<script src="/site_media/js/libs/modernizr-1.7.min.js"></script>
-	<script src="/site_media/js/libs/yepnope.1.0.2-min.js"></script>
+	<script src="/site_media/js/libs/modernizr.custom.57507.js"></script>
 </head>
 
 <body>
@@ -43,17 +42,30 @@
 			<h1>{% trans "Create your personal tag cloud!" %}</h1>
 			<a id="btn-go" class="cupid-green glow" href="#">Go</a>
 		</header>
-		<div id="main" role="main"></div>
-    	<footer>
-
-		</footer>
-	</div> <!-- eo #container -->
+		<div id="main" role="main">
+			{% block main %}{% endblock %}
+		</div>
+	</div>
+	{% block outer %}{% endblock %}
 	<script>
-	yepnope([
-		"http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js",
+	Modernizr.load([		
 		{
-			load: "/site_media/js/libs/jquery.pulse.js",
-	  		callback: function() {
+			load: ["http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js", "/site_media/js/plugins.js"],
+			complete: function () {
+				if (!window.jQuery) {
+					yepnope('/site_media/js/libs/jquery-1.5.1.min.js');
+			    }
+			}
+		},
+		{
+			load: "/site_media/js/core.js",
+			complete: function() {
+				gw.init();
+			}
+		},
+		{
+			load: "/site_media/js/libs/jquery.pulse.min.js",
+			complete: function() {
 				$('#btn-go').pulse({
 				    opacity: [1, 0.68]
 				}, 1200, 200);
@@ -61,11 +73,6 @@
 		}
 	]);
 	</script>
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="/site_media/js/plugins.js"></script>
-  <script src="/site_media/js/core.js"></script>
-  <!-- end scripts-->
   
   <!--[if lt IE 7 ]>
     <script src="/site_media/js/libs/dd_belatedpng.js"></script>
