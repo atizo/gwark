@@ -24,3 +24,5 @@ from django.template.response import TemplateResponse
 def welcome(request):
     return TemplateResponse(request, 'welcome.html', {})
 
+def edit_paragraph(request, p_id):
+    return TemplateResponse(request, 'welcome.html', {})

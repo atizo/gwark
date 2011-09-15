@@ -33,8 +33,9 @@ if settings.DEBUG:
 
 
 urlpatterns += patterns('gwark.apps',
+    
     url(r'^$', 'core.views.welcome', name='welcome'),
-
+    (r'^edit-paragraph/(?P<p_id>\d+)/edit/$', 'core.views.edit_paragraph'),
     (r'^guru/doc/', include('django.contrib.admindocs.urls')),
     (r'^guru/', include(admin.site.urls)),
 )
