@@ -56,6 +56,18 @@ ADMIN_URL = 'guru'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'grx!dkji&hxpb5oynzd$ud_%)t!ccl)7vh1k!k100x8_r*r)d^'
 
+ACCOUNT_ACTIVATION_DAYS = 7
+
+LOGIN_REDIRECT_URL = '/'
+
+# email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+NO_REPLY_ADDRESS = 'Atizo <no.reply@atizo.com>'
+EMAIL_HOST = 'mail.atizo.com'
+EMAIL_HOST_USER = 'no.reply@atizo.com'
+EMAIL_HOST_PASSWORD = 'rK756Ave'
+EMAIL_USE_TLS = True
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -68,7 +80,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'socialregistration.middleware.FacebookMiddleware'
 )
+
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 
+                           'socialregistration.auth.FacebookAuth')
+
+TEMPLATE_CONTEXT_PROCESSORS = ('django.contrib.auth.context_processors.auth', 'django.core.context_processors.request', )
 
 ROOT_URLCONF = 'gwark.urls'
 
@@ -85,5 +103,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
+    'socialregistration',
+    'registration',
     'gwark.apps.core'
 )

@@ -40,3 +40,43 @@ a.cupid-green {
 a.glow{
 	@include box-shadow(rgba(#009421, 0.5) 0 0 12px, rgba(#52bf3d, 0.3) 0 0 5px 1px inset);
 }
+
+@mixin clean-gray {
+  @include background-image(linear-gradient(top, #32392e, #272d24));
+  @include box-shadow(#414839 0px 0px 0px 1px inset);
+  border: 1px solid #171a16;
+  @include border-radius(5px);
+  color: #fff;
+  height: 27px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 0px 20px;
+  text-align: center;
+  @include text-shadow(#000 0px 2px 0px);
+  
+  &:visited{
+    color: #fff;
+  }
+
+  &:hover {
+    @include background-image(linear-gradient(top, #2f362b, #262b23));
+    @include box-shadow(#3e4537 0px 0px 0px 1px inset);
+    @include text-shadow(rgba(150, 255, 0, 0.4) 0px 0px 5px);
+    color: #90ff00;
+    cursor: pointer;   
+  }
+
+  &:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    @include box-shadow(inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee);
+    color: #fff;
+  }
+}
+
+a.clean-gray {
+  @include clean-gray;
+  @include inline-block;
+  
+}

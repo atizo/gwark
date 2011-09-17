@@ -4,11 +4,13 @@
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 {% load i18n %}
+{% load facebook_tags %}
+{% load twitter_tags %}
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title></title>
+	<title>{% block title %}{% endblock %}</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
@@ -17,6 +19,7 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round&v2' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="/site_media/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="/site_media/css/print.css" media="print" rel="stylesheet" type="text/css" />
 	<!--[if IE]>
@@ -29,10 +32,10 @@
 	<div id="tbar">
 		<div class="frame">
 			<ul>
-				<li><a href="#">{% trans "Log in" %}</a></li>
-				<li><a href="#">{% trans "Sign up" %}</a></li>
-				<li><a href="#">{% trans "About" %}</a></li>
-				<li><a href="#">{% trans "Help" %}</a></li>
+				<li><a href="/">{% trans "log in" %}</a></li>
+				<li><a href="#">{% trans "sign up" %}</a></li>
+				<li><a href="#">{% trans "about" %}</a></li>
+				<li><a href="#">{% trans "help" %}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -43,19 +46,44 @@
 			<a id="btn-go" class="cupid-green glow" href="#">Go</a>
 		</header>
 		<div id="main" role="main">
-			{% block main %}{% endblock %}
+            <!-- 
+            <div style="margin: 30px;">
+                <a href="#" class="clean-gray">Log in</a>
+            </div>
+            <form class="connect-button" name="login" method="post" action="/social/facebook/login/">
+                {% csrf_token %}
+			
+			<input type="image" onclick="gw.facebookConnect(this.form);return false;" src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_large_long.gif" />
+			</form>
+
+            {% twitter_button %} -->
+             
+			{% block content %}{% endblock %}
 		</div>
 	</div>
 	{% block outer %}{% endblock %}
+	<div id="fb-root"></div>
+	
 	<script>
 	Modernizr.load([		
 		{
-			load: ["http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js", "/site_media/js/plugins.js"],
+			load: ["http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js", "/site_media/js/plugins.js", "/site_media/js/libs/jquery.fancybox-1.3.4.pack.js"],
 			complete: function () {
 				if (!window.jQuery) {
 					yepnope('/site_media/js/libs/jquery-1.5.1.min.js');
 			    }
 			}
+		},
+		{
+			load: "http://connect.facebook.net/en_US/all.js",
+			complete: function() {
+			    // initialize the library with the API key
+				FB.init({ 
+				   appId: '176664465742395', 
+				   apiKey: '0f1a7dfa86ed51080efc29bf898bbed1', 
+				   status: true, cookie: true, xfbml: true}
+				);							
+            }
 		},
 		{
 			load: "/site_media/js/core.js",
@@ -73,10 +101,9 @@
 		}
 	]);
 	</script>
-  
-  <!--[if lt IE 7 ]>
-    <script src="/site_media/js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg");</script>
-  <![endif]-->
+	<!--[if lt IE 7 ]>
+	  <script src="/site_media/js/libs/dd_belatedpng.js"></script>
+	  <script>DD_belatedPNG.fix("img, .png_bg");</script>
+	<![endif]-->
 </body>
 </html>

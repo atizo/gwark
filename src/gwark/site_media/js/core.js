@@ -12,8 +12,10 @@ gw.anim.step = 0;
 
 gw.adjustSlider = function(){
 	var viewportWidth = $(window).width();
+	$('div#slideshow_container').height(viewportWidth * 0.4);
 	$('ul#slideshow_list').width(viewportWidth * 4);
 	$('ul#slideshow_list li').width(viewportWidth);
+	//todo clear timeout
 };
 
 gw.endless = function(){
@@ -33,15 +35,26 @@ gw.endless = function(){
 	});	
 };
 
+gw.facebookConnect = function(form){
+    function handleResponse(response){
+        form.submit();
+    }
+    FB.login(handleResponse, {perms: 'email' }  );
+}
+
 
 gw.init = function(){
-	
-	gw.adjustSlider();
-	$('#slideshow_container').show();
+	//load slider images asyc
+	$('img.slideimg2').attr('src', 'http://assets.tumblr.com/images/register_login/dashboard.png');
+	$('img.slideimg3').attr('src', 'http://assets.tumblr.com/images/register_login/phones.png').load(function(){
+		gw.adjustSlider();
+		$('#slideshow_container').show();						
+		gw.endless();
+    });
 	
 	$(window).resize(function() {
 		gw.adjustSlider();
 	});
 	
-	gw.endless();
+	$("a#example1").fancybox({padding: 0, speedIn: 200, speedOut: 100});
 };

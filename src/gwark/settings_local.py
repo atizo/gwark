@@ -33,9 +33,8 @@ sys.path.insert(0, LIB_DIR)
 
 logging.config.fileConfig(os.path.join(PROJECT_ROOT, 'environments/logging.conf'))
 
-PLATFORM_URL = 'gwark.dev:8000'
 INTERNAL_IPS = ('127.0.0.1',socket.gethostbyname('platform.dev'))
-SESSION_COOKIE_DOMAIN = 'gwark.dev'
+SESSION_COOKIE_DOMAIN = 'aeby.dyndns.org'
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'site_media')
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'),)
 
@@ -57,3 +56,14 @@ DATABASES = {
 # memcached
 CACHE_BACKEND = 'dummy:///'
 CACHE_TIMEOUT_DEFAULT = 1800
+
+FACEBOOK_APP_ID  = '176664465742395'
+FACEBOOK_API_KEY = 'b61940d3357fea342d4e9d55a24bc214'
+FACEBOOK_SECRET_KEY = '0f1a7dfa86ed51080efc29bf898bbed1'
+FACEBOOK_REQUEST_PERMISSIONS = 'email'
+
+TWITTER_CONSUMER_KEY = 'g600yxAMVMUQKBkqQNZg'
+TWITTER_CONSUMER_SECRET_KEY = 'OoDnS8FKMnLQTTiVUNJ9OG5H2iZxRCf9aQ4fQVkvtU'
+TWITTER_REQUEST_TOKEN_URL = 'https://api.twitter.com/oauth/request_token'
+TWITTER_ACCESS_TOKEN_URL = 'https://api.twitter.com/oauth/access_token'
+TWITTER_AUTHORIZATION_URL = 'https://api.twitter.com/oauth/authenticate'

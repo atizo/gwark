@@ -12,7 +12,7 @@
 	height: 100%;
 }
 
-#slideshow_list{
+ul#slideshow_list{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -31,10 +31,11 @@
 		padding: 0;
 	}
 	
-	#slideshow_list img {
+	img {
 		height: 100%;
 		-webkit-transition: margin .3s;
 		-moz-transition: margin .3s;
 		transition: margin .3s;
+		width: auto;
 	}
 }
