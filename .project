@@ -16,7 +16,7 @@
 			<arguments>
 				<dictionary>
 					<key>LaunchConfigHandle</key>
-					<value>&lt;project&gt;/.externalToolBuilders/compass.launch</value>
+					<value>&lt;project&gt;/.externalToolBuilders/compass_0.11.5.launch</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>

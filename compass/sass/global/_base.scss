@@ -15,6 +15,8 @@ div#tbar{
 	position: absolute;
 	top: 0;
 	width: 100%;
+	@include box-shadow(rgba(#000, 0.4) 0px 2px 15px);
+	
 	
 	div.frame{
 		width: 960px;
@@ -31,7 +33,7 @@ div#tbar{
 				padding-right: 20px;
 				
 				a{					
-					@include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 1px);
+					@include text-shadow(rgba(0, 0, 0, 0.4) 0 -1px 1px);
 				}
 			}
 		}

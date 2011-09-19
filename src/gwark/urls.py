@@ -33,11 +33,10 @@ if settings.DEBUG:
 
 
 urlpatterns += patterns('gwark.apps',
+    
     url(r'^$', 'core.views.welcome', name='welcome'),
     url(r'^social/', include('socialregistration.urls')),
     #url(r'^accounts/', include('registration.backends.default.urls')),
-
-
     (r'^guru/doc/', include('django.contrib.admindocs.urls')),
     (r'^guru/', include(admin.site.urls)),
 )
